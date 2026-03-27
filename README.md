@@ -6,7 +6,7 @@ Incluye soporte CORS con django-cors-headers para integración con frontend Angu
 
 ## Requisitos
 
-- Python 3.10+ (o superior)
+- Python 3.13+ (o superior)
 - PostgreSQL
 - Virtual environment (recomendado)
 - django-cors-headers (se instala automáticamente con requirements.txt)

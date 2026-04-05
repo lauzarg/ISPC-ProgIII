@@ -22,7 +22,8 @@ class LoginOTP(models.Model):
 
 class PasswordResetToken(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    token = models.CharField(max_length=64, unique=True, default=uuid.uuid4().hex)
+    # usar la función uuid.uuid4 como callable, no uuid.uuid4().hex
+    token = models.CharField(max_length=64, unique=True, default=uuid.uuid4)
     created_at = models.DateTimeField(auto_now_add=True)
     is_used = models.BooleanField(default=False)
 
